@@ -1,31 +1,110 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Aventura do Cubo Azul</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo de Aventura</title>
+  <style>
+    body {
+      background: #111;
+      color: white;
+      font-family: sans-serif;
+      text-align: center;
+    }
+    #menu {
+      margin-top: 100px;
+    }
+    #selecao-personagem {
+      margin-top: 30px;
+    }
+    button {
+      background-color: #444;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 10px;
+      cursor: pointer;
+      font-size: 18px;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #666;
+    }
+    #titulo {
+      font-size: 32px;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
   <div id="menu">
-    <h1>Aventura do Cubo Azul</h1>
-    <button onclick="startGame()">Iniciar Jogo</button>
-  </div>
+    <div id="titulo">
+      <h1>Bem-vindo ao Jogo de Aventura!</h1>
+      <p>Escolha um personagem para começar</p>
+    </div>
 
-  <div id="game" hidden>
-    <div id="player"></div>
-    <div id="obstacles"></div>
-    <div id="hud">
-      <span id="score">Pontos: 0</span>
-      <span id="lives">Vidas: 3</span>
+    <!-- Selecione o personagem -->
+    <div id="selecao-personagem">
+      <button id="personagem1">Personagem 1 - Pula Mais Alto</button>
+      <button id="personagem2">Personagem 2 - Mais Rápido</button>
+      <button id="personagem3">Personagem 3 - Equilibrado</button>
+    </div>
+
+    <!-- Botão para iniciar o jogo -->
+    <div id="iniciar">
+      <button id="iniciarJogo" style="display:none;">Iniciar Aventura</button>
     </div>
   </div>
 
-  <div id="game-over" hidden>
-    <h1>💀 Fim de Jogo</h1>
-    <p>Sua pontuação: <span id="final-score">0</span></p>
-    <button onclick="restartGame()">Jogar Novamente</button>
-  </div>
+  <script>
+    let personagem = {
+      vida: 100,
+      dano: 10,
+      velocidade: 5,
+      pulo: 30
+    };
 
-  <script src="game.js"></script>
+  
+    function mudarPersonagem1() {
+      personagem.vida = 70;
+      personagem.dano = 10; 
+      personagem.velocidade = 5; 
+      personagem.pulo = 50; 
+      mostrarBotaoIniciar();
+    }
+
+    function mudarPersonagem2() {
+      personagem.vida = 100; 
+      personagem.dano = 5; 
+      personagem.velocidade = 8;
+      personagem.pulo = 30;
+      mostrarBotaoIniciar();
+    }
+
+    function mudarPersonagem3() {
+      personagem.vida = 100; 
+      personagem.dano = 10; 
+      personagem.velocidade = 5; 
+      personagem.pulo = 30; 
+      mostrarBotaoIniciar();
+    }
+
+    
+    function mostrarBotaoIniciar() {
+      document.getElementById("iniciarJogo").style.display = "inline-block";
+    }
+
+   
+    document.getElementById("iniciarJogo").addEventListener("click", function() {
+      alert("O jogo está começando com os atributos do personagem!");
+     
+      window.location.href = "fase1.html";  
+    });
+
+    
+    document.getElementById("personagem1").addEventListener("click", mudarPersonagem1);
+    document.getElementById("personagem2").addEventListener("click", mudarPersonagem2);
+    document.getElementById("personagem3").addEventListener("click", mudarPersonagem3);
+  </script>
 </body>
 </html>
