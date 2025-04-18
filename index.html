@@ -2,14 +2,30 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Meu Site Simples</title>
+  <title>Aventura do Cubo Azul</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Olá, mundo!</h1>
-  <p>Este é o meu primeiro site no GitHub Pages!</p>
-  <footer>
-    <p>nada a declarar </p>
-  </footer>
+  <div id="menu">
+    <h1>Aventura do Cubo Azul</h1>
+    <button onclick="startGame()">Iniciar Jogo</button>
+  </div>
+
+  <div id="game" hidden>
+    <div id="player"></div>
+    <div id="obstacles"></div>
+    <div id="hud">
+      <span id="score">Pontos: 0</span>
+      <span id="lives">Vidas: 3</span>
+    </div>
+  </div>
+
+  <div id="game-over" hidden>
+    <h1>💀 Fim de Jogo</h1>
+    <p>Sua pontuação: <span id="final-score">0</span></p>
+    <button onclick="restartGame()">Jogar Novamente</button>
+  </div>
+
+  <script src="game.js"></script>
 </body>
 </html>
