@@ -1,0 +1,59 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #111;
+  color: #fff;
+  text-align: center;
+}
+
+#menu, #game-over {
+  margin-top: 80px;
+}
+
+#game {
+  width: 800px;
+  height: 300px;
+  margin: 20px auto;
+  border: 3px solid #fff;
+  background: #222;
+  position: relative;
+  overflow: hidden;
+}
+
+#player {
+  width: 40px;
+  height: 40px;
+  background: dodgerblue;
+  position: absolute;
+  bottom: 0;
+  left: 50px;
+}
+
+#obstacles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 800px;
+  height: 100%;
+}
+
+.obstacle {
+  width: 30px;
+  height: 30px;
+  background: crimson;
+  position: absolute;
+  bottom: 0;
+  animation: move 3s linear infinite;
+}
+
+@keyframes move {
+  0% { left: 800px; }
+  100% { left: -30px; }
+}
+
+#hud {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
