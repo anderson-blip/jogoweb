@@ -96,3 +96,42 @@ function restartGame() {
   document.getElementById('menu').hidden = false;
   document.getElementById('obstacles').innerHTML = '';
 }
+let personagem = {
+  vida: 100,
+  dano: 10,
+  velocidade: 5,
+  pulo: 30
+};
+
+function mostrarBotaoIniciar() {
+  document.getElementById("iniciarJogo").style.display = "inline-block";
+}
+
+function mudarPersonagem1() {
+  personagem.vida = 70;
+  personagem.dano = 10;
+  personagem.velocidade = 5;
+  personagem.pulo = 50;
+  mostrarBotaoIniciar();
+}
+
+function mudarPersonagem2() {
+  personagem.vida = 100;
+  personagem.dano = 5;
+  personagem.velocidade = 8;
+  personagem.pulo = 30;
+  mostrarBotaoIniciar();
+}
+
+function mudarPersonagem3() {
+  personagem.vida = 100;
+  personagem.dano = 10;
+  personagem.velocidade = 5;
+  personagem.pulo = 30;
+  mostrarBotaoIniciar();
+}
+
+document.getElementById("iniciarJogo").addEventListener("click", () => {
+  alert("Jogo começando!");
+  window.location.href = "fase1.html";
+});
