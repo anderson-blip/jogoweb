@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Meu Site Simples</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Olá, mundo!</h1>
+  <p>Este é o meu primeiro site no GitHub Pages!</p>
+  <footer>
+    <p>Feito com 💙 por [Seu Nome]</p>
+  </footer>
+</body>
+</html>
