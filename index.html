@@ -46,8 +46,14 @@
     <!-- Selecione o personagem -->
     <div id="selecao-personagem">
       <button id="personagem1">Personagem 1 - Pula Mais Alto</button>
+        <img src="imagens/personagem1_pixel.png" alt="Personagem 1">
+      <p>Personagem 1 - Pula mais alto</p>
       <button id="personagem2">Personagem 2 - Mais Rápido</button>
+       <img src="imagens/personagem2_pixel.png" alt="Personagem 2">
+      <p>Personagem 2 - Mais rápido</p>
       <button id="personagem3">Personagem 3 - Equilibrado</button>
+       <img src="imagens/personagem3_pixel.png" alt="Personagem 3">
+      <p>Personagem 3 - Equilibrado</p>
     </div>
 
     <!-- Botão para iniciar o jogo -->
@@ -151,31 +157,15 @@
 
   <audio id="somSelecao" src="som/selecao.mp3"></audio>
 
-  <div id="selecao-personagem">
-    <button id="personagem1">
-      <img src="imagens/personagem1_pixel.png" alt="Personagem 1">
-      <p>Personagem 1 - Pula mais alto</p>
-    </button>
-    <button id="personagem2">
-      <img src="imagens/personagem2_pixel.png" alt="Personagem 2">
-      <p>Personagem 2 - Mais rápido</p>
-    </button>
-    <button id="personagem3">
-      <img src="imagens/personagem3_pixel.png" alt="Personagem 3">
-      <p>Personagem 3 - Equilibrado</p>
-    </button>
-  </div>
-
   <script>
     const somSelecao = document.getElementById("somSelecao");
     const somFundo = document.getElementById("somFundo");
 
-    // Iniciar o som de fundo assim que o jogo carregar
+
     window.onload = function() {
       somFundo.play();
     };
 
-    // Som de seleção ao clicar no personagem
     document.getElementById("personagem1").addEventListener("click", function() {
       somSelecao.play();
       alert("Você escolheu o Personagem 1!");
