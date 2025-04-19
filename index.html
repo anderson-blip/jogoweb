@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Jogo de Aventura</title>
   <style>
     body {
@@ -11,112 +11,30 @@
       font-family: sans-serif;
       text-align: center;
     }
-    #menu {
+    h1 {
       margin-top: 100px;
     }
-    #selecao-personagem {
-      margin-top: 30px;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-    .personagem-btn {
-      background-color: #222;
-      border: 2px solid #555;
-      border-radius: 10px;
-      padding: 10px;
-      cursor: pointer;
-      width: 160px;
-      transition: 0.3s;
-    }
-    .personagem-btn:hover {
-      background-color: #333;
-    }
-    .personagem-btn img {
-      width: 100px;
-      height: 100px;
-      display: block;
-      margin: 0 auto 10px;
-    }
-    #iniciar {
-      margin-top: 30px;
-    }
     #iniciarJogo {
-      padding: 10px 20px;
-      font-size: 18px;
+      padding: 15px 30px;
+      font-size: 20px;
       background: #28a745;
       border: none;
       color: white;
-      border-radius: 8px;
+      border-radius: 10px;
       cursor: pointer;
-      display: none;
+      margin-top: 50px;
     }
   </style>
 </head>
 <body>
-  <div id="menu">
-    <h1>Bem-vindo ao Jogo de Aventura!</h1>
-    <p>Escolha um personagem para começar</p>
-
-    <div id="selecao-personagem">
-      <div class="personagem-btn" onclick="mudarPersonagem1()">
-        <img src="imagens/personagem1.png" alt="Personagem 1">
-        <p>Personagem 1<br>Pula mais alto</p>
-      </div>
-      <div class="personagem-btn" onclick="mudarPersonagem2()">
-        <img src="imagens/personagem2.png" alt="Personagem 2">
-        <p>Personagem 2<br>Mais rápido</p>
-      </div>
-      <div class="personagem-btn" onclick="mudarPersonagem3()">
-        <img src="imagens/personagem3.png" alt="Personagem 3">
-        <p>Personagem 3<br>Equilibrado</p>
-      </div>
-    </div>
-
-    <div id="iniciar">
-      <button id="iniciarJogo">Iniciar Aventura</button>
-    </div>
-  </div>
+  <h1>Bem-vindo ao Jogo de Aventura!</h1>
+  <p>Clique no botão para iniciar sua jornada.</p>
+  
+  <button id="iniciarJogo">Iniciar Aventura</button>
 
   <script>
-    const personagem = {
-      vida: 100,
-      dano: 10,
-      velocidade: 5,
-      pulo: 30
-    };
-
-    function mostrarBotaoIniciar() {
-      document.getElementById("iniciarJogo").style.display = "inline-block";
-    }
-
-    function mudarPersonagem1() {
-      personagem.vida = 70;
-      personagem.dano = 10;
-      personagem.velocidade = 5;
-      personagem.pulo = 50;
-      mostrarBotaoIniciar();
-    }
-
-    function mudarPersonagem2() {
-      personagem.vida = 100;
-      personagem.dano = 5;
-      personagem.velocidade = 8;
-      personagem.pulo = 30;
-      mostrarBotaoIniciar();
-    }
-
-    function mudarPersonagem3() {
-      personagem.vida = 100;
-      personagem.dano = 10;
-      personagem.velocidade = 5;
-      personagem.pulo = 30;
-      mostrarBotaoIniciar();
-    }
-
     document.getElementById("iniciarJogo").addEventListener("click", () => {
-      alert("Jogo começando com o personagem escolhido!");
+      // Pode definir atributos padrões do personagem aqui se quiser
       window.location.href = "fase1.html";
     });
   </script>
